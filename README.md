@@ -1,7 +1,7 @@
 
 Daily Quote
 
-This app uses an api to generate you a random quote.
+This app uses an api to generate a random quote.
 
 ## API Reference
 
