@@ -4,8 +4,7 @@ Daily Quote
 This app uses an api to generate a random quote.
 
 
-<a href="moha/1747.github.io/quoteOTD">View Here </a>
-## API Reference
+[View Here](https://moha1747.github.io/quoteOTD/)
 
 
 
