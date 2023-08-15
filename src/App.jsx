@@ -17,7 +17,7 @@ function App() {
   };
   return (
     <div className="container">
-      <div class="quote">{quote && <p>{quote}</p>}</div>
+      <div className="quote">{quote && <p>{quote}</p>}</div>
       <button className="btn" onClick={getQuote}>
         
         Get Quote
