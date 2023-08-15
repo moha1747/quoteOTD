@@ -3,6 +3,13 @@ Daily Quote
 
 This app uses an api to generate a random quote.
 
+## View Here
+
+
+```http
+https://moha/1747.github.io/quoteOTD
+```
+
 ## API Reference
 
 
