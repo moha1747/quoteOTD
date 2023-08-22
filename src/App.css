@@ -2,7 +2,8 @@
  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px; 
+  justify-content: space-between;
+
 }
 .quote {
     position: absolute;
@@ -30,6 +31,7 @@ left: 46%;
   color: #f1f5f9;
   padding: 0.5em 1em;
 border: 15px solid transparent;
+cursor: pointer;
 
   border-radius: 6px;
   box-shadow: 0 10px 20px rgba(225, 29, 72, 0.5),

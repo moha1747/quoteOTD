@@ -1,10 +1,14 @@
-import "./App.css";
-import { useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
+import "./App.css";
 
 function App() {
   const [quote, setQuote] = useState("");
+  const [isClicked, setIsClicked] = useState(false); // New state
+
   const getQuote = () => {
+    setIsClicked(true); // Set to true when button is pressed
+
     axios
       .get("https://api.quotable.io/random")
       .then((response) => {
@@ -12,14 +16,18 @@ function App() {
         setQuote(response.data.content);
       })
       .catch((err) => {
-        console.log(err);
+        console.error("Error fetching the quote: ", err);
       });
   };
+
   return (
     <div className="container">
-      <div className="quote">{quote && <p>{quote}</p>}</div>
+      {isClicked && (
+        <div className="quote">
+          {quote ? <p>{quote}</p> : <p>Loading...</p>}
+        </div>
+      )}
       <button className="btn" onClick={getQuote}>
-        
         Get Quote
       </button>
     </div>
