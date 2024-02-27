@@ -8,7 +8,7 @@ export default function Home(){
         <>
 
         <Navbar />
-        <div className="mt-[500px]" >
+        <div className="mt-[200px]" >
         <Quote/>
         </div>
 

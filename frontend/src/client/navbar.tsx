@@ -47,7 +47,7 @@ export default function Navbar() {
             <a href="/app/saved" className="text-xl md:cursor-pointer hover:text-red-600 font-[Poppins] duration-500">Saved</a>
             </li>
  
-            <button onClick={handleLogout} className="bg-red-600 cursor-pointer text-white font-[Poppins] duration-500 px-6 py-2 mx-4 hover:bg-red-700 rounded">Sign Up</button>
+            <button onClick={handleLogout} className="bg-red-600 cursor-pointer text-white font-[Poppins] duration-500 px-6 py-2 mx-4 hover:bg-red-700 rounded">Sign out</button>
         </ul>
         </div>
     </nav>

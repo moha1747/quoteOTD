@@ -47,7 +47,7 @@ const Quote = () => {
 };
 
   return (
-    <div className="flex flex-col items-center pt-[70px] justify-between text-center">
+    <div className="flex flex-col items-centerjustify-between text-center">
     {isClicked && (
       <div
         className="text-center w-full   font-serif relative text-3xl text-black border border-transparent rounded-md shadow-lg transition-all"

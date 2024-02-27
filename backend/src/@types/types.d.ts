@@ -1,5 +1,5 @@
 // types.d.ts
-import  { IUser }  from '../db/users'; // Adjust the import path as necessary
+import  { IUser }  from '../../src/db/users'; // Adjust the import path as necessary
 import express from 'express';
 declare global {
   namespace Express {
