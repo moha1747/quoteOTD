@@ -48,7 +48,7 @@ Then you will need to start the Fronted.
 
 **Backend:** Node, Express
 
-**Database** MongoDB
+**Database**: MongoDB
 
 
 
