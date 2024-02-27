@@ -53,12 +53,5 @@ Then you will need to start the Fronted.
 
 
 
-## Features
-
-- Responsive
-- Secure user Authentication
-
-
-
 
 
