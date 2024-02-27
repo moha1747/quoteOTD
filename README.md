@@ -43,7 +43,7 @@ Then you will need to start the Frontend.
 
 **Frontend:** Typescript, React, TailwindCSS
 
-**Backend:** Node, Express
+**Backend:** NodeJS, Express
 
 **Database**: MongoDB
 
