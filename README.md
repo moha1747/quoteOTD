@@ -41,9 +41,6 @@ Then you will need to start the Fronted.
 
 
 
-
-## Tech Stack
-
 **Fronend:** Typescript, React, TailwindCSS
 
 **Backend:** Node, Express
