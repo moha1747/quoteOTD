@@ -25,7 +25,7 @@ First you will need to start the Backend.
 
 ```
 
-Then you will need to start the Fronted. 
+Then you will need to start the Frontend. 
 
 ```bash
   cd frontend
