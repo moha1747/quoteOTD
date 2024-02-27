@@ -4,7 +4,7 @@
 ⚡️ A great quote encapsulates an idea or thought, it can clarify, enlighten or inspire.
 -
 
-#### This project aims to help people have a collection of quotes ready at their fingertips. You have the ability to access hundreds of quotes  this API --> https://docs.quotable.io/
+#### This project aims to help people have a collection of quotes ready at their fingertips. You have the ability to access hundreds of quotes using this API: https://docs.quotable.io/
 
 
 
