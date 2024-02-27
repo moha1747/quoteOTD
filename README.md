@@ -41,7 +41,7 @@ Then you will need to start the Fronted.
 
 
 
-**Fronend:** Typescript, React, TailwindCSS
+**Frontend:** Typescript, React, TailwindCSS
 
 **Backend:** Node, Express
 
