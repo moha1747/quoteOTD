@@ -36,7 +36,7 @@ Then you will need to start the Fronted.
 ## Important:
     Make sure you have port 8080 and 5173 free. 
     
-    The Project will not work if these two ports are free
+    The Project will not work if these two ports aren't free
 ## Tech Stack
 
 
