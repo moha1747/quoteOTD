@@ -2,7 +2,6 @@ import  User  from '../db/users';
 import { createUser, getUserByEmail } from '../db/users';
 import express from 'express';
 import { authentication, random } from '../helpers';
-import { useNavigate } from 'react-router-dom';
 
 export const login = async (req: express.Request, res: express.Response) =>{
     try{
