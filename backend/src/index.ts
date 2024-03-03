@@ -8,7 +8,6 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import router from './router';
 import { getUserById } from './db/users';
-import * as dotenv from 'dotenv';
 
 
 
@@ -40,13 +39,12 @@ const server = http.createServer(app);
 server.listen(8080, () => {
     console.log('Server running on https://localhost:8080');
 })
+const dotenv = require("dotenv");
 dotenv.config();
 
-const MONGO_URL = 'mongodb://localhost:27017'
-console.log(process.env.MONGO_URL)
 
 mongoose.Promise = Promise;
-mongoose.connect(MONGO_URL)
+mongoose.connect(process.env.URI)
 mongoose.connection.on('error', (error: Error) => console.log(error));
 
 app.use('/', router());
