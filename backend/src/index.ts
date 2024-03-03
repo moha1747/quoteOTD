@@ -8,6 +8,9 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import router from './router';
 import { getUserById } from './db/users';
+import * as dotenv from 'dotenv';
+
+
 
 const app = express();
 app.use(cors({
@@ -37,11 +40,13 @@ const server = http.createServer(app);
 server.listen(8080, () => {
     console.log('Server running on https://localhost:8080');
 })
+dotenv.config();
 
-const MONGO_URL = 'mongodb+srv://moha1747:Tokyo.1214@cluster0.slxadnl.mongodb.net/?retryWrites=true&w=majority';
+const MONGO_URL = 'mongodb://localhost:27017'
+console.log(process.env.MONGO_URL)
 
 mongoose.Promise = Promise;
-mongoose.connect(MONGO_URL);
+mongoose.connect(MONGO_URL)
 mongoose.connection.on('error', (error: Error) => console.log(error));
 
 app.use('/', router());
