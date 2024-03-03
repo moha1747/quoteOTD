@@ -1,49 +1,69 @@
-import { useNavigate } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-
 import {  IconButton } from "@mui/material";
 import  { useState } from "react";
-
 export default function Navbar(){
-    const navigate = useNavigate();
-    const [isMenuOpen, setMenuOpen] = useState(false);
 
-    const handleLoginClick = () => {
-      navigate("/auth");
-    };
+    const [isMenuOpen, setMenuOpen] = useState(false); // Changes state depending on viewport size
     const toggleMenu = () => {
-        setMenuOpen(!isMenuOpen);
+        setMenuOpen(!isMenuOpen); 
     }
     
     return (
   
-        <nav className="border-2 p-5 shadow md:flex md:items-center md:justify-between mb-[50px]">
-            <div className="flex justify-between items-center ">
-                <span className="text-xl font-[Poppins] cursor-pointer">
-                    <img className="h-10 inline" src="https://thumbs.dreamstime.com/b/quote-icon-quote-sign-white-background-simple-vector-illustration-black-quote-icon-quote-sign-logo-144929690.jpg"/>
+<header className="fixed w-full backdrop-filter backdrop-blur-md z-30 md:bg-opacity-30 border-b border-red-200 transition duration-300 ease-in-out">
+<div className="max-w-6xl mx-auto px-5 sm:px-6">
+<div className="flex items-center justify-between h-16 md:h-20">
+    <div className="shrink-0 mr-4">
+        <a href="/"  className="block cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" className="cursor-pointer" width="24" height="24" viewBox="0 0 24 24"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
+        </a>
+    </div>
 
-                    Quote of the Day
-                </span>
-                <span   className="text-3xl cursor-pointer mx-2 md:hidden block">
-                    <IconButton onClick={toggleMenu}>
-                        {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
-                    </IconButton>
+    <nav className="hidden fixed inset-0 md:flex md:grow ">
+        <ul className="flex grow justify-end flex-wrap items-center max-h-[80vh] overflow-contain">
+            <li>
+                <a href="/auth/signin" className="text-lg text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out cursor-pointer font-[Poppins]">
+                    Sign in
+                </a>
+            </li>
+            <li>
+                <a href="/auth/signup" className="text-lg border py-2 flex items-center rounded-md px-4 font-[poppins] text-gray-200 bg-gray-900 hover:bg-gray-800 ml-3">
+                    <span>Sign up</span>
+                    <svg className="w-3 h-3 fill-current text-gray-400 shrink-0 ml-2 -mr-1" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" style={{cursor: "pointer"}}><path d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z" fill-rule="nonzero" style={{cursor: "pointer", }}></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div className="flex md:hidden">
+        <span className="text-3xl cursor-pointer mx-2 md:hidden block">
+            <IconButton onClick={toggleMenu}>
+                {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
+            </IconButton>
+        </span>
+        <div className={`${isMenuOpen ? 'block' : 'hidden'}`}>
+            <nav className="absolute top-full  right-0 h-screen pb-16 z20  w-1/2 overflow-scroll bg-white opacity-100">
+                <ul className="px-5 py-20 flex flex-col justify-center flex-wrap">
+                    <li>
+                        <a href="/auth/signin" className="flex justify-center text-lg w-full text-gray-600 hover:text-gray-900 py-2">
+                            Sign in
+                        </a>
+                    </li>
+                    <li> 
+                        <a href="/auth/signup" className="text-lg border py-2 flex items-center justify-center rounded-md px-4 font-[poppins] text-gray-200 bg-gray-900 hover:bg-gray-800 ml-3">
+                            <span>Sign up</span>
+                                <svg className="w-3 h-3 fill-current text-gray-400 shrink-0 ml-2 -mr-1" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" style={{cursor: "pointer"}}><path d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z" fill-rule="nonzero" style={{cursor: "pointer", }}></path></svg>  
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+</div>
+</header>
 
-                </span>
-            </div>
-            <div>
-            <ul className={`md:flex md:items-center z-[-1] md:z-1 md:mb-[500px]absolute bg-white w-full left-0 md:w-auto md:py-3 py-4 md:pl-0 pl-7 md:opacity-100 top-[80px] transition-all ease-in duration-500 ${isMenuOpen ? 'block' : 'hidden'}`}>
-            <li className="mx-4 px-5   py-6 md:my-0">
-                <a href="/" className="text-xl md:cursor-pointer hover:text-red-600 font-[Poppins] duration-500">Home</a>
-                </li>
-     
-                <button onClick={handleLoginClick} className="bg-red-600 cursor-pointer text-white font-[Poppins] duration-500 px-6 py-2 mx-4 hover:bg-red-700 rounded">Sign Up</button>
-            </ul>
-            </div>
-        </nav>
-          
-   
     )
 
 }

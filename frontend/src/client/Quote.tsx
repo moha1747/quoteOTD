@@ -59,7 +59,10 @@ const Quote = () => {
         }}
       >
         {quote ? <p className="whitespace-pre-line">"{quote}<br></br>
-        <p className="uppercase hyphens-none">~{author}</p></p> : <p>Loading...</p>}
+        <p className="uppercase hyphens-none">
+            ~{author}</p>
+        </p> 
+          : <p>Loading...</p>}
       </div>
     )}
     <div className="flex flex-row justify-between py-3  mx-auto  ">

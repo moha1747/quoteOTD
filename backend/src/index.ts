@@ -1,3 +1,4 @@
+//important info dont scroll
 import express from 'express';
 import http from 'http';
 import bodyParser from 'body-parser';
@@ -10,7 +11,7 @@ import { getUserById } from './db/users';
 
 const app = express();
 app.use(cors({
-    origin: 'http://localhost:5174',
+    origin: 'http://localhost:5173',
     credentials: true,
 }));
 app.get('/api/users/:userId', (req, res) => {

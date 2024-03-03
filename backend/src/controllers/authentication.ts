@@ -72,9 +72,9 @@ export const register = async (req: express.Request, res: express.Response) =>{
 export const logout = async (req: express.Request, res: express.Response) => {
     try {
         const sessionToken = req.cookies['QUOTE-AUTH'];
-        const navigate = useNavigate();
 
         if (!sessionToken) {
+            console.log('!sessionToken')
             return res.sendStatus(400);
         }
 
@@ -84,10 +84,9 @@ export const logout = async (req: express.Request, res: express.Response) => {
             res.clearCookie('QUOTE-AUTH', {domain: 'localhost', path: '/'});
             return res.sendStatus(200);
         }
-        user.authentication.sessionToken = null;
-        await user.save();
+        user.authentication.sessionToken = '';
         res.clearCookie('QUOTE-AUTH', { domain: 'localhost', path: '/' });
-        navigate('/home')
+        await user.save();
         return res.json({ success: true, message: 'Logged out successfully' });
 
     } catch (error){

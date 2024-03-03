@@ -10,8 +10,10 @@ export interface IUser{
     salt: string;
     sessionToken: string;
   };
-  quotes: string[];
-}
+  quotes: []
+  
+};
+
 
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true },
@@ -19,9 +21,11 @@ const userSchema = new mongoose.Schema({
   authentication: { 
     password: { type: String, required: true },
     salt: { type: String, select: false }, 
-    sessionToken: { type: String, select: false } },
-  quotes: [String],
+    sessionToken: { type: String, select: false }
+  },
+  quotes: [],
 });
+
 
 const User = mongoose.model('User', userSchema);
 
