@@ -21,7 +21,7 @@ const Saved = () => {
     useEffect(() => {
       const fetchSavedQuotes = async () => {
           try{
-      const response = await axios.get(`http://localhost:8080/api/quotes/${userId}`, {
+      const response = await axios.get(`https://quoteotd-1.onrender.com/api/quotes/${userId}`, {
           headers: {
               Authorization: sessionToken, 
             }
@@ -39,7 +39,7 @@ const Saved = () => {
 
   const deleteQuote = async (quoteToDelete: Quote) => {
     try {
-      await axios.delete(`http://localhost:8080/api/quotes/${userId}`, {
+      await axios.delete(`https://quoteotd-1.onrender.com/api/quotes/${userId}`, {
         headers: {
           Authorization: sessionToken, 
           'Content-Type': 'application/json'

@@ -74,7 +74,7 @@ export default function Dashboard() {
               }
             };
           
-            axios.post(`http://localhost:8080/api/quotes`, quoteData, {
+            axios.post(`https://quoteotd-1.onrender.com/api/quotes`, quoteData, {
               headers: {
                 Authorization: `Bearer ${sessionToken}`, 
               },

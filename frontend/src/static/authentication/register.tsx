@@ -13,7 +13,7 @@ export default function Auth(){
 
         const handleSignin = async (e: React.FormEvent<HTMLFormElement>) => {
             e.preventDefault();
-            const url = `http://localhost:8080/auth/register`
+            const url = `https://quoteotd-1.onrender.com/auth/register`
 
             try {
                 const response = await axios.post(url, {
