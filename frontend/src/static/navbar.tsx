@@ -12,7 +12,7 @@ export default function Navbar(){
     return (
   
 <header className="fixed w-full backdrop-filter backdrop-blur-md z-30 md:bg-opacity-30 border-b border-red-200 transition duration-300 ease-in-out">
-<div className="max-w-6xl mx-auto px-5 sm:px-6">
+<div className="max-w mx-auto px-5 sm:px-6">
 <div className="flex items-center justify-between h-16 md:h-20">
     <div className="shrink-0 mr-4">
         <a href="/"  className="block cursor-pointer">
@@ -20,8 +20,8 @@ export default function Navbar(){
         </a>
     </div>
 
-    <nav className="hidden fixed inset-0 md:flex md:grow ">
-        <ul className="flex grow justify-end flex-wrap items-center max-h-[80vh] overflow-contain">
+    <nav className="hidden fixed inset-0 md:flex md:grow">
+        <ul className="md:flex md:grow justify-end border-2 border-green-300 flex-wrap items-center max-h-[80vh] overflow-contain">
             <li>
                 <a href="/auth/signin" className="text-lg text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out cursor-pointer font-[Poppins]">
                     Sign in

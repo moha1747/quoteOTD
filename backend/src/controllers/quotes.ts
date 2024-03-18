@@ -1,7 +1,6 @@
 import express from 'express';
-import { getQuotes, createQuote, updateQuoteById, deleteQuoteById, getQuotesByUserId } from '../db/quotes'; // Adjust the import path as necessary
-import User, { getUserById, getUserBySessionToken } from '../db/users';
-import { merge, get } from 'lodash';
+import { getQuotes, createQuote, updateQuoteById, getQuotesByUserId } from '../db/quotes';
+import User, { getUserById } from '../db/users';
 
 
 export const getAllQuotes = async (req: express.Request, res: express.Response) => {
@@ -30,7 +29,7 @@ export const deleteQuoteFromUser = async (userId: string, quoteToDelete: string)
     return result;
   } catch (error) {
     console.error('Error deleting the quote:', error);
-    throw error; // Rethrow or handle as needed
+    throw error; 
   }
 };
 
@@ -40,7 +39,6 @@ export const updateQuote = async (req: express.Request, res: express.Response) =
         const { id } = req.params;
         const updateData = req.body;
 
-        // Validate input data, assuming at least the 'text' field is required
         if (!updateData.text) {
             return res.status(400).send("Quote text is required");
         }

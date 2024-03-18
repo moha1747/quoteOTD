@@ -27,7 +27,6 @@ export const login = async (req: express.Request, res: express.Response) =>{
         user.authentication.sessionToken = authentication(salt, user._id.toString());
         await user.save();
         res.cookie('QUOTE-AUTH', user.authentication.sessionToken, { domain: 'localhost', path: '/'});
-        // localStorage.setItem('userId', user._id.toString());
 
         return res.status(200).json({ userId: user._id, sessionToken: user.authentication.sessionToken});
 

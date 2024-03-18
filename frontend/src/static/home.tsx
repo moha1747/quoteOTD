@@ -14,6 +14,7 @@ export default function Home(){
     const [quote, setQuote] = useState<string[]>([])
     const [author, setAuthor] = useState<string[]>([])
     const [isSearched, setIsSearched] = useState(false);
+
     
     const [searchedQuotes, setSearchedQuotes] = useState<Quote[]>([]);
 
@@ -66,7 +67,7 @@ export default function Home(){
 
             <div className="pt-32 pb-12 md:pt-40 md:pb-20">
                 <div className="text-center pb-12 md:pb-16">
-                    <h1 className="text-5xl md:text-6xl font-extrabold font-[poppins] leading-tight mb-4 ">Welcome to Quote of the 
+                    <h1 className="text-5xl md:text-7xl font-extrabold font-[poppins] leading-tight mb-4 ">Welcome to Quote of the 
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-purple-400"> Day</span>
                     </h1>
                     <div className="max-w-3xl mx-auto">
@@ -87,7 +88,7 @@ export default function Home(){
                                     {isSearched && (
                                         <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md z-10 flex justify-center items-center">
                                             <div className="bg-red-300  text-gray-800 p-5 rounded-lg max-h-[80vh] overflow-y-auto">
-                                            <span className="text-3xl   cursor-pointer mx-2 md:hidden block">
+                                            <span className="text-3xl   cursor-pointer mx-2 block">
                                                 <IconButton onClick={()=> setIsSearched(false)}>
                                                     { <CloseIcon style={{color: "white"}} />}
                                                 </IconButton>
